@@ -7,7 +7,7 @@ const limit = 3;
 const arr = [0, 1, 2, 3];
 const fn = (n: number) => n === 0 ? Promise.resolve(n) : Promise.reject(n));
 
-const result = await AsyncPoll(limit, arr, fn);
+const result = await asyncPool(limit, arr, fn);
 /**
  * {
  *   { status: 'fulfilled', value: 0 },
